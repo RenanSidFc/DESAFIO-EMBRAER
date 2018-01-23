@@ -1,0 +1,63 @@
+﻿@model IEnumerable<DesafioEmbraer.Models.DESAFIO_EMBRAER_VENDA>
+
+@{
+    ViewBag.Title = "Cadastro de venda";
+}
+
+<h2>Cadastro de venda</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cod_prod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vendedor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor_total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cod_prod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vendedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor_total)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Vendaid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Vendaid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Vendaid })
+        </td>
+    </tr>
+}
+
+</table>

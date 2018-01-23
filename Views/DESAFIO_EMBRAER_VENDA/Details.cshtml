@@ -1,0 +1,66 @@
+﻿@model DesafioEmbraer.Models.DESAFIO_EMBRAER_VENDA
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Detalhes da venda</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cod_prod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cod_prod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vendedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor_unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor_unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor_total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor_total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Vendaid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

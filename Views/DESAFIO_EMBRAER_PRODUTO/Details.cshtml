@@ -1,0 +1,42 @@
+﻿@model DesafioEmbraer.Models.DESAFIO_EMBRAER_PRODUTO
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Dethalhes do produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome_prod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome_prod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cod_prod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cod_prod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco_prod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preco_prod)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Produtoid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
